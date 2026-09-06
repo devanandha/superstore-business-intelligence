@@ -1,0 +1,2400 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/28/2026 11:56:00 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LOCALHOST"
+  DTS:CreatorName="PortfolioUser"
+  DTS:DTSID="{AF1FEB92-C53C-4187-85A6-438CA9755988}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{C1FFBDE7-4AA2-4060-8A99-2FC3C8729F93}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_Superstore]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B856A095-9592-430B-B147-D08BEFC87980}"
+      DTS:ObjectName="FF_Superstore">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="data\Orders.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Row ID"
+              DTS:DTSID="{D444EAA9-027E-4BB2-9F52-741043E68E97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order ID"
+              DTS:DTSID="{59F59D13-3F36-4AA1-975C-8DFDD46AEA8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order Date"
+              DTS:DTSID="{A57D38DF-968E-4DA1-973D-86187B127439}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ship Date"
+              DTS:DTSID="{3B82EA87-22ED-4196-8300-119729E5740E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ship Mode"
+              DTS:DTSID="{8C7FD223-D0F3-40B1-8D5E-898F630FEB9E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer ID"
+              DTS:DTSID="{61E968FE-31DA-45BF-85F0-215BDD664F0B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Name"
+              DTS:DTSID="{EF8BFA44-3C81-4995-B621-883B16367679}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Segment"
+              DTS:DTSID="{639B02A0-8FF2-41C8-A974-A9C9DADB1B52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{F552C3BA-327D-4AFA-89E6-CBE59C45DDFD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{CE76D834-C320-47F8-B748-5D9011D05B6C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{25BEA532-E857-41D2-B45C-B40CD5BFFFB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Postal Code"
+              DTS:DTSID="{56BD7611-B95B-4FA0-99DE-E56BF742B218}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{AFC5F47F-62C4-4BDB-8879-5520A382B31D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product ID"
+              DTS:DTSID="{8B9294BD-A2AA-42C5-9587-4E68D24383D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{14E777D3-F86A-4F59-BB29-A3AB123CC210}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sub-Category"
+              DTS:DTSID="{D7BB5F82-7E2A-4B6D-9A8A-AE05D29BC4B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product Name"
+              DTS:DTSID="{A260E505-530B-4AFF-B62A-4E8290D5E3C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales"
+              DTS:DTSID="{25E41904-9907-45AB-A615-7EA04E2C8CF8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{49FEA029-11D8-4439-AD36-1F1EF1DECF59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Discount"
+              DTS:DTSID="{0D584057-A901-4740-BF53-568B659D3B6F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Profit"
+              DTS:DTSID="{B5A54222-A7ED-4AEA-B12B-98E20DC3113F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.SuperstoreDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C433A62E-11E5-4618-8C52-919C2BAD5B0E}"
+      DTS:ObjectName="localhost.SuperstoreDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=SuperstoreDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SuperstoreDW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.SuperstoreDW 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EC1FFF58-E2DA-484C-88B1-39EFB02C60CE}"
+      DTS:ObjectName="localhost.SuperstoreDW 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=SuperstoreDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SuperstoreDW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B24CD5A3-4102-4D24-88C7-684873ADEB34}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LoadDate">
+      <DTS:VariableValue
+        DTS:DataType="7">3/1/2026 12:48:56 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AC5326B2-A78A-4D99-9E07-99B9F2847A82}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageName">
+      <DTS:VariableValue
+        DTS:DataType="8">Superstore_ETL</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E0829F24-6D26-422E-8C4D-EF268C22DE5F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount_Superstore">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Load_Superstore"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7E1E5387-5DCE-49F4-8EF4-C50C57212FC6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Load_Superstore"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Load_Superstore\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Order Date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Order Date"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Ship Date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ship Date"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Sales]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sales"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Profit]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Profit"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Profit]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Quantity]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Quantity"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Discount]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Discount"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Row ID]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Row ID"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Row ID]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Order ID]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Order ID"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Customer ID]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Customer ID"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Customer ID]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Customer Name]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Customer Name"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Product Name]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Product Name"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Product Name]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Ship Mode]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ship Mode"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Mode]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Segment]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Segment"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Segment]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Country]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="City"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[State]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Postal Code]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Postal Code"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Postal Code]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Region]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Region"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Product ID]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product ID"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Category]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input].Columns[Sub-Category]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sub-Category"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sub-Category]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Order Date_converted]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Order Date_converted]"
+                      name="Order Date_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Ship Date_converted]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Ship Date_converted]"
+                      name="Ship Date_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Sales_converted]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Sales_converted]"
+                      name="Sales_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Profit_converted]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Profit_converted]"
+                      name="Profit_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Profit]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Quantity_converted]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Quantity_converted]"
+                      name="Quantity_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Discount_converted]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Discount_converted]"
+                      name="Discount_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Row ID_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Row ID_converted]"
+                      name="Row ID_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Row ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Order ID_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Order ID_converted]"
+                      name="Order ID_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Customer ID_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Customer ID_converted]"
+                      name="Customer ID_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Customer ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Customer Name_convertd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="200"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Customer Name_convertd]"
+                      name="Customer Name_convertd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Product Name_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Product Name_converted]"
+                      name="Product Name_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Product Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Ship Mode_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Ship Mode_converted]"
+                      name="Ship Mode_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Mode]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Segment_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Segment_converted]"
+                      name="Segment_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Segment]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Country_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Country_converted]"
+                      name="Country_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Country]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[City_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[City_converted]"
+                      name="City_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[State_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[State_converted]"
+                      name="State_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[State]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Postal Code_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Postal Code_converted]"
+                      name="Postal Code_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Postal Code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Region_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Region_converted]"
+                      name="Region_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Region]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Product ID_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Product ID_converted]"
+                      name="Product ID_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Category_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Category_converted]"
+                      name="Category_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Sub-Category_converted]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Sub-Category_converted]"
+                      name="Sub-Category_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sub-Category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Superstore\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Superstore\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Derived Column.Inputs[Derived Column Input].Columns[Sales]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sales"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\Derived Column.Inputs[Derived Column Input].Columns[Discount]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Discount"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Load_Superstore\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Output].Columns[SalesAfterDiscount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Output].Columns[SalesAfterDiscount]"
+                      name="SalesAfterDiscount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_R8)#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]} * (1 - (DT_R8)#{Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_R8)Sales * (1 - (DT_R8)Discount)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Load_Superstore\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Superstore\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_Superstore\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_Superstore]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_Superstore]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Row ID]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Row ID]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Row ID]"
+                      name="Row ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]"
+                      name="Order ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]"
+                      name="Order Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]"
+                      name="Ship Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Mode]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Mode]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Mode]"
+                      name="Ship Mode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Customer ID]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer ID]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Customer ID]"
+                      name="Customer ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]"
+                      name="Customer Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Segment]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Segment]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Segment]"
+                      name="Segment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Postal Code]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Postal Code]"
+                      name="Postal Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Region]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]"
+                      name="Product ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sub-Category]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sub-Category]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sub-Category]"
+                      name="Sub-Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Product Name]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Name]"
+                      length="255"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Product Name]"
+                      name="Product Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sales]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Sales]"
+                      name="Sales"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Discount]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Discount]"
+                      name="Discount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Profit]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Profit]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].Columns[Profit]"
+                      name="Profit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Row ID]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Row ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Order ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Order Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Ship Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Mode]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Ship Mode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer ID]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Customer ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Customer Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Segment]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Segment" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Postal Code" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Product ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sub-Category]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Sub-Category" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Name]"
+                      codePage="65001"
+                      dataType="str"
+                      length="255"
+                      name="Product Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sales]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Sales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Discount]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Discount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Profit]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Profit" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Superstore\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactSuperstoreRaw]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_Superstore\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.SuperstoreDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.SuperstoreDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Order ID_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Order ID_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Order ID_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Order Date_converted]"
+                      cachedDataType="date"
+                      cachedName="Order Date_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Order Date_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ship Date_converted]"
+                      cachedDataType="date"
+                      cachedName="Ship Date_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShipDate]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Ship Date_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer ID_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Customer ID_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Customer ID_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer Name_convertd]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Customer Name_convertd"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerName]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Customer Name_convertd]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sales_converted]"
+                      cachedDataType="r8"
+                      cachedName="Sales_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Sales_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Quantity_converted]"
+                      cachedDataType="i4"
+                      cachedName="Quantity_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Quantity_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Discount_converted]"
+                      cachedDataType="r8"
+                      cachedName="Discount_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Discount]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Discount_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Profit_converted]"
+                      cachedDataType="r8"
+                      cachedName="Profit_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Profit]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Profit_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Product Name_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Product Name_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Product Name_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ship Mode_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Ship Mode_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShipMode]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Ship Mode_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Segment_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Segment_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Segment]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Segment_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Country_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Country_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[City_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="City_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[City_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="State_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[State_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Postal Code_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Postal Code_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Postal Code_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Region_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Region_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Region_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Product ID_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Product ID_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Product ID_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Category_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Category_converted]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sub-Category_converted]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Sub-Category_converted"
+                      externalMetadataColumnId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SubCategory]"
+                      lineageId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output].Columns[Sub-Category_converted]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RowID]"
+                      dataType="i4"
+                      name="RowID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      dataType="nText"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      dataType="dbDate"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShipDate]"
+                      dataType="dbDate"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShipMode]"
+                      dataType="nText"
+                      name="ShipMode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      dataType="nText"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerName]"
+                      dataType="nText"
+                      name="CustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Segment]"
+                      dataType="nText"
+                      name="Segment" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="nText"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      dataType="nText"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      dataType="nText"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      dataType="nText"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      dataType="nText"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      dataType="nText"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      dataType="nText"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SubCategory]"
+                      dataType="nText"
+                      name="SubCategory" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                      dataType="nText"
+                      name="ProductName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      dataType="numeric"
+                      name="Sales"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Discount]"
+                      dataType="numeric"
+                      name="Discount"
+                      precision="18"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Profit]"
+                      dataType="numeric"
+                      name="Profit"
+                      precision="18"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Superstore\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Superstore\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Superstore\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Superstore\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Superstore\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCount_Superstore</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Superstore\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Superstore\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT_Load_Superstore\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Load_Superstore.Paths[Data Conversion Output]"
+              endId="Package\DFT_Load_Superstore\Derived Column.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Load_Superstore\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Load_Superstore.Paths[Derived Column Output]"
+              endId="Package\DFT_Load_Superstore\Row Count.Inputs[Row Count Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT_Load_Superstore\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Load_Superstore.Paths[Flat File Source Output]"
+              endId="Package\DFT_Load_Superstore\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT_Load_Superstore\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DFT_Load_Superstore.Paths[Row Count Output 1]"
+              endId="Package\DFT_Load_Superstore\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT_Load_Superstore\Row Count.Outputs[Row Count Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Insert_Audit_Superstore"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9010F69B-637E-456F-9AC5-4D6302DA439A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Insert_Audit_Superstore"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C433A62E-11E5-4618-8C52-919C2BAD5B0E}"
+          SQLTask:SqlStatementSource="INSERT INTO dbo.ETL_Audit&#xA;(PackageName, LoadDate, RowsLoaded)&#xA;VALUES (?, GETDATE(), ?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::RowCount_Superstore"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_turncate_staging_superstore"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{97675169-265C-4F75-AEF3-D6E6E86E6999}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_turncate_staging_superstore"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EC1FFF58-E2DA-484C-88B1-39EFB02C60CE}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Superstore_Staging;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F2BAC74E-D603-4C25-99AE-948E47A2B617}"
+      DTS:From="Package\SQL_turncate_staging_superstore"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_Load_Superstore" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{A6882863-B719-41B9-B636-00C178D0F65A}"
+      DTS:From="Package\DFT_Load_Superstore"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL_Insert_Audit_Superstore" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\DFT_Load_Superstore"
+          TopLeft="238,344" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\SQL_Insert_Audit_Superstore"
+          TopLeft="229,465" />
+        <NodeLayout
+          Size="246,42"
+          Id="Package\SQL_turncate_staging_superstore"
+          TopLeft="220,223" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="343,265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.5,79"
+              Start="0,0"
+              End="-9.5,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.5"
+                    Point2="0,39.5"
+                    Point3="-4,39.5" />
+                  <mssgle:LineSegment
+                    End="-5.5,39.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.5,39.5"
+                    Point2="-9.5,39.5"
+                    Point3="-9.5,43.5" />
+                  <mssgle:LineSegment
+                    End="-9.5,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="333.5,386">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,79"
+              Start="0,0"
+              End="8.5,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.5"
+                    Point2="0,39.5"
+                    Point3="4,39.5" />
+                  <mssgle:LineSegment
+                    End="4.5,39.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,39.5"
+                    Point2="8.5,39.5"
+                    Point3="8.5,43.5" />
+                  <mssgle:LineSegment
+                    End="8.5,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Load_Superstore">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\DFT_Load_Superstore\Row Count"
+          TopLeft="204,399" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\DFT_Load_Superstore\OLE DB Destination"
+          TopLeft="145,496" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\DFT_Load_Superstore\Derived Column"
+          TopLeft="340,319" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\DFT_Load_Superstore\Data Conversion"
+          TopLeft="225,240" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_Load_Superstore\Flat File Source"
+          TopLeft="205.5,127.5" />
+        <EdgeLayout
+          Id="Package\DFT_Load_Superstore.Paths[Data Conversion Output]"
+          TopLeft="305.5,282">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="113.5,37"
+              Start="0,0"
+              End="113.5,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="109.5,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="109.5,18.5"
+                    Point2="113.5,18.5"
+                    Point3="113.5,22.5" />
+                  <mssgle:LineSegment
+                    End="113.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="31.55234375,23.5,50.3953125,11.2236328125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Superstore.Paths[Row Count Output 1]"
+          TopLeft="270.5,441">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-37,55"
+              Start="0,0"
+              End="-37,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="-4,27.5" />
+                  <mssgle:LineSegment
+                    End="-33,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33,27.5"
+                    Point2="-37,27.5"
+                    Point3="-37,31.5" />
+                  <mssgle:LineSegment
+                    End="-37,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-43.69765625,32.5,50.3953125,11.2236328125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Superstore.Paths[Flat File Source Output]"
+          TopLeft="283.5,169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22,70.5"
+              Start="0,0"
+              End="22,63">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.25"
+                    Point2="0,35.25"
+                    Point3="4,35.25" />
+                  <mssgle:LineSegment
+                    End="18,35.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18,35.25"
+                    Point2="22,35.25"
+                    Point3="22,39.25" />
+                  <mssgle:LineSegment
+                    End="22,63" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-14.19765625,40.25,50.3953125,11.2236328125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Superstore.Paths[Derived Column Output]"
+          TopLeft="419,361">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-148.5,38"
+              Start="0,0"
+              End="-148.5,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="-4,19" />
+                  <mssgle:LineSegment
+                    End="-144.5,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-144.5,19"
+                    Point2="-148.5,19"
+                    Point3="-148.5,23" />
+                  <mssgle:LineSegment
+                    End="-148.5,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.44765625,24,50.3953125,11.2236328125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_Superstore\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
